@@ -1,6 +1,18 @@
-# Caddy and FastCGI
+# Example Caddy and FastCGI setup
 
-[FastCGI specification]
+[FastCGI] is a simple, modular way to interface between web and
+application servers. [Caddy] is a very easy to use and feature-rich
+webserver. This repository contains example code to show how it's
+possible to setup Caddy with FastCGI.
+
+## Usage
+
+- `nix-shell` to optionally get all the dependencies
+- `just build` to build the simple Go example FastCGI clients
+- `just test` to build and start the server and clients
+
+Now the Caddy webserver should be listening on http:localhost:1222,
+serving FastCGI on the `/tcp` and `/unix` endpoints.
 
 ```bash
 # Fastest possible response (nothing)
@@ -35,4 +47,5 @@ Requests/sec:  10287.53
 Transfer/sec:      1.79MB
 ```
 
-[FastCGI Specification]: https://fast-cgi.github.io/spec
+[FastCGI]: https://fast-cgi.github.io/spec
+[Caddy]: https://caddyserver.com/

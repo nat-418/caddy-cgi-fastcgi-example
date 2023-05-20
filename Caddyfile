@@ -1,0 +1,9 @@
+http://localhost:1222 {
+	reverse_proxy /tcp localhost:1111 {
+		transport fastcgi
+	}
+
+	reverse_proxy /unix unix//tmp/fcgi-example.sock {
+		transport fastcgi
+	}
+}

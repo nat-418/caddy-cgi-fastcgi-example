@@ -7,5 +7,6 @@ mkShell {
     caddy
     go
     just
+    wrk
   ];
 }

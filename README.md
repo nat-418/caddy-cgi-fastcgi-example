@@ -34,7 +34,7 @@ services can be called by the webserver over the network.
 ## Usage
 
 - `nix-shell` to optionally get all the dependencies
-- `just build` to build the simple Go example FastCGI clients
+- `just build` to build the server and clients
 - `just test` to build and start the server and clients
 
 Now the Caddy webserver should be listening on http:localhost:1222,

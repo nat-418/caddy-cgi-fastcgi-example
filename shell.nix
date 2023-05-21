@@ -4,7 +4,7 @@ with pkgs;
 
 mkShell {
   buildInputs = [
-    caddy
+    xcaddy
     go
     just
     wrk

@@ -1,4 +1,10 @@
+{
+	order cgi before respond
+}
+
 http://localhost:1222 {
+	cgi /cgi-bin/* /home/nat/Code/sandbox/fastcgi/{path}
+
 	reverse_proxy /tcp localhost:1111 {
 		transport fastcgi
 	}
